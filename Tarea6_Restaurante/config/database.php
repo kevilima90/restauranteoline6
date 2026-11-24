@@ -1,15 +1,12 @@
 <?php
 declare(strict_types=1);
 
-/*
- * CONEXIÓN A LA BASE DE DATOS
- * Hosting: InfinityFree
- */
+/* CONEXIÓN LOCAL XAMPP */
 
-$host = 'sql204.infinityfree.com';
-$dbname = 'if0_43517302_restaurante';
-$username = 'if0_43517302';
-$password = 'Mateolima2020';
+$host = '127.0.0.1';
+$dbname = 'restaurante_online';
+$username = 'root';
+$password = '';
 
 $dsn = "mysql:host={$host};dbname={$dbname};charset=utf8mb4";
 
@@ -21,8 +18,7 @@ try {
     ]);
 
 } catch (PDOException $exception) {
-    error_log('Error de conexión MySQL: ' . $exception->getMessage());
-
+    error_log($exception->getMessage());
     http_response_code(500);
-    exit('No se pudo conectar con la base de datos. Verifique la configuración.');
+    exit('Error de conexión con MySQL. Verifique XAMPP y la configuración.');
 }
