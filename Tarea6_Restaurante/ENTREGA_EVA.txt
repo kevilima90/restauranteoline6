@@ -1,0 +1,14 @@
+TAREA PRÁCTICA 6 — PROGRAMACIÓN WEB AVANZADA
+
+RESPUESTA 1: ESPACIO COLABORATIVO CODA
+Enlace real del espacio del grupo: [PEGAR ENLACE DE CODA]
+
+RESPUESTA 2: REPOSITORIO Y APLICACIÓN
+Repositorio GitHub del grupo: [PEGAR URL REAL DEL REPOSITORIO]
+Sitio web publicado: [PEGAR URL REAL DEL HOSTING]
+
+Antes de enviar:
+- Verificar que el repositorio sea accesible para el docente.
+- Verificar que el enlace de Coda permita visualizar la participación del grupo.
+- Verificar que la web cargue y permita iniciar sesión.
+- Reemplazar todos los campos entre corchetes por enlaces reales.

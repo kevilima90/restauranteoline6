@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+:root {
+    --ink: #22252b;
+    --muted: #707782;
+    --brand: #9f3d2d;
+    --brand-dark: #7d2d22;
+    --cream: #faf7f2;
+    --line: #ece5dc;
+    --surface: #ffffff;
+    --soft: #f4ece5;
+}
+
+* { box-sizing: border-box; }
+body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+}
+.app-navbar { background: #25282e; box-shadow: 0 4px 18px rgba(0,0,0,.10); }
+.navbar-brand { font-family: 'Playfair Display', serif; letter-spacing: .2px; }
+.navbar .nav-link { color: rgba(255,255,255,.78); }
+.navbar .nav-link:hover { color: #fff; }
+.eyebrow {
+    color: var(--brand);
+    font-size: .76rem;
+    font-weight: 700;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+}
+.hero-panel {
+    background: linear-gradient(120deg, #fff 0%, #f2e6dc 100%);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.hero-panel p:not(.eyebrow) { color: var(--muted); max-width: 620px; }
+.hero-icon {
+    color: rgba(159,61,45,.16);
+    font-size: clamp(4rem, 10vw, 8rem);
+    line-height: 1;
+    padding: 0 1rem;
+}
+.stat-card, .content-card, .dish-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(50,35,20,.04);
+}
+.stat-card { padding: 1.4rem; }
+.stat-number { color: var(--brand); font-size: 2.25rem; font-weight: 700; line-height: 1.1; }
+.stat-label { color: var(--muted); margin-top: .4rem; }
+.content-card { padding: clamp(1rem, 3vw, 1.5rem); }
+.form-card { max-width: 780px; }
+.btn-brand {
+    background: var(--brand);
+    border-color: var(--brand);
+    color: #fff;
+    font-weight: 600;
+}
+.btn-brand:hover, .btn-brand:focus {
+    background: var(--brand-dark);
+    border-color: var(--brand-dark);
+    color: #fff;
+}
+.btn-outline-brand { color: var(--brand); border-color: var(--brand); }
+.btn-outline-brand:hover { background: var(--brand); border-color: var(--brand); color: #fff; }
+.dish-card { overflow: hidden; transition: transform .18s ease, box-shadow .18s ease; }
+.dish-card:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(50,35,20,.09); }
+.dish-art {
+    height: 115px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #f1e2d5, #fbf5ed);
+    font-size: 3.3rem;
+}
+.price-tag { color: var(--brand); font-weight: 700; white-space: nowrap; }
+.app-table thead th {
+    color: var(--muted);
+    font-size: .78rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    border-bottom-color: var(--line);
+}
+.app-table td { border-bottom-color: #f1ece6; }
+.empty-state {
+    padding: 3rem 1rem;
+    text-align: center;
+    color: var(--muted);
+}
+.order-preview {
+    border-radius: 12px;
+    background: var(--soft);
+    color: #5b4438;
+    padding: .85rem 1rem;
+    font-size: .92rem;
+}
+.app-footer { color: #858b94; border-top: 1px solid var(--line); }
+.login-page {
+    background:
+        radial-gradient(circle at 12% 15%, rgba(159,61,45,.13), transparent 30%),
+        radial-gradient(circle at 88% 85%, rgba(191,145,103,.18), transparent 28%),
+        #f7f2ec;
+}
+.login-card {
+    width: min(100%, 440px);
+    padding: 2.2rem;
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    background: #fff;
+}
+.brand-mark {
+    width: 54px;
+    height: 54px;
+    display: grid;
+    place-items: center;
+    border-radius: 17px;
+    background: var(--brand);
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+}
+.login-card h1 { font-family: 'Playfair Display', serif; }
+.form-control, .form-select {
+    border-color: #e4ddd5;
+    border-radius: 10px;
+    padding-top: .65rem;
+    padding-bottom: .65rem;
+}
+.form-control:focus, .form-select:focus {
+    border-color: #c77c6f;
+    box-shadow: 0 0 0 .2rem rgba(159,61,45,.12);
+}
+@media (max-width: 575.98px) {
+    .hero-panel { align-items: flex-start; }
+    .hero-icon { display: none; }
+    .login-card { padding: 1.5rem; }
+    .navbar .d-flex.align-items-center { padding: .5rem 0; }
+}
